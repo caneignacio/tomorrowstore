@@ -1,5 +1,19 @@
 # Tomorrowstore
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Tools and Technologies](#tools-and-technologies)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Modelling](#data-modelling)
+- [Power BI Report](#power-bi-report)
+- [Power BI Dashboard](#power-bi-dashboard)
+- [Key Insights](#key-insights)
+- [Powerpoint Presentation](#powerpoint-presentation)
+- [Data Source](#data-source)
+- [References](#references)
+
+
 ### Overview
 
 The following data analysis project comprises some reports over a business database, with datasets representing the operations of _TomorrowStore_, a fictional retail company specialized in technology. 
