@@ -34,7 +34,7 @@ The available data for this project consists in eight datasets. They are availab
 
 - [currencyexchange.csv](files/datasets/currencyexchange.csv): Currency exchange values for different dates.
 
-- [customer.csv](files/datasets/customer.csv): Information about each customer.
+- [customer.csv](customer.csv): Information about each customer.
 
 - [date.csv](files/datasets/date.csv): A date table comprising all possible dates to be assigned to the data.
 
@@ -211,7 +211,7 @@ IF(
     NextYearBD)
 ´´´
 
-The following image shows the definitive semantic model, which can be accessed [via web]() or downloading the [file](files/tomorrowstore-datamodel.pbix) from Github repository.
+The following image shows the definitive semantic model, which can be accessed downloading the [file](tomorrowstore-datamodel.pbix) from this Github repository.
 
 ![](files/model.png)
 
