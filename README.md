@@ -34,7 +34,7 @@ The available data for this project consists in eight datasets. They are availab
 
 - [store.csv](files/store.csv): Information about all stores.
 
-As a first step, an initial exploration was performed in SQL Server for each of the files. The queries can be found in the respective “initial-exploration” SQL files (one for each dataset) inside (this folder)[files/SQLfiles]. Then, more detailed aspects were checked directly on PowerQuery, after loading the datasets.
+As a first step, an initial exploration was performed in SQL Server for each of the files. The queries can be found in the respective SQL files inside [this folder](files/SQLfiles). Then, more detailed aspects were checked directly on PowerQuery, after loading the datasets.
 
 The steps taken and main results can be summed up as follows:
 
@@ -197,9 +197,9 @@ IF(
     NextYearBD)
 ´´´
 
-The following image shows the definitive semantic model:
+The following image shows the definitive semantic model, which can be accessed [via web]() or downloading the [file](tomorrowstore-datamodel.pbix) from Github repository.
 
-!()
+![](files/model.png)
 
 ### Power BI Report
 
@@ -207,43 +207,53 @@ The model was published into Power BI Service and used as a data source for all 
 
 The first report, _Financial & Sales_, shows general economic indicators about TomorrowStore’s activity, such as revenue and profit ([Web version]() and [Power BI file](files/tomorrowstore-financial-&-sales) available). It has a Front Cover and the following three pages:
 - General stats: It shows cards with Revenue, Average Order Value, Gross Profit, CoGS, and Gross Profit Margin. It also has a date slicer.
- !()
+ ![](files/financialsales-2.png)
 
 - Revenue: It shows cards with Revenue and Average Order Value. It also shows a line chart with revenue comparison over different periods of time (with buttons to change between Year-to-year and Month-to-month Revenue). In addition, it has slicers to select Countries, Product Categories, Products, and Dates.
-!()
+![](files/financialsales-3.png)
  
 - Gross Profit: It has the same visuals and slicers as the previous page, but showing Gross Profit and CoSG instead of Revenue and Average Order Value.
-!()
+![](files/financialsales-4.png)
 
 The second report, _Stores_, shows indicators and detailed information about stores([Web version]() and [Power BI file](files/tomorrowstore-stores) available). It has a Front Cover and the following two pages:
 - Stores: It shows a card with the total Number of Stores and a bar chart with the Top 10 Stores (with buttons to change between two dimensions: Revenue and Gross Profit). It also has slicers to select Countries, Product Categories, and Dates.
-!()
+![](files/stores-2.png)
  
 - Countries: It shows a filled map at the Countries level and a bar chart with a ranking of Countries (with buttons to change between three dimensions: Number of Stores, Revenue, and Gross Profit). It also has slicers to select Product categories and Dates.
-!()
+![](files/stores-3.png)
 
 The third report, _Products_, shows indicators and detailed information about TomorrowStore’s products([Web version]() and [Power BI file](files/tomorrowstore-products) available). It has a Front Cover and the following three pages:
 - Products: It shows a card with the total Number of Products and a bar chart with the Top 10 Products (with buttons to change between four dimensions: Number of Customers, Units Sold, Revenue, and Gross Profit). It has a table that shows the Top Pair (or pairs) of Products most frequently bought together. It also has slicers to select Countries, Product Categories, Product Subcategories, and Dates.
-!()
+![](files/products-2.png)
 
 - Categories: It shows two bar charts, one with the Top 3 Product Categories and the other with the Top 3 Product Subcategories (with buttons to change between four dimensions: Customers, Units Sold, Revenue, and Gross Profit). It also has slicers to select Countries and Dates.
-!()
+![](files/products-3.png)
  
 - Price Analysis: It shows two scatter plot charts, one comparing Price to Units Sold, and the other comparing Price to Unit Cost. It also has slicers to select Product Categories, Product Subcategories, and Dates.
-!()
+![](files/products-4.png)
 
 The fourth and last report, _Customers_, shows indicators and detailed information about TomorrowStore’s clients, with some visuals designed for direct actions ([Web version]() and [Power BI file](files/tomorrowstore-customers) available). It has a Front Cover and the following three pages:
 - Top Customers: It shows a card with the Number of Customers, a bar chart with the Top 10 Customers by Revenue, and a table with the Top 100 Customers whose birthday is on this day (to be used for mailing campaigns). It has slicers to select Countries.
-!()
+![](files/customers-2.png)
 
 - Customer Stats: It shows three cards, respectively representing Number of Customers with Orders (not to be confused with Active Customers), Average Customer Revenue, and Repeat Purchase Rate. It also has two line charts, showing the Customer Retention Rate and the evolution of the Number of Active Customers. In addition, it has a slicer to select Countries, and two more slicers to select Dates: one date relative to the cards and the Retention Rate line chart, and the other only affecting the Active Customers line chart. It should be noted that the Active Customers visual refers to customer creation and/or deletion dates, while the rest of the visuals refer to sales dates, hence the need for two different date slicers.
-!()
+![](files/customers-3.png)
  
 - Customer demographics: It shows a filled map at countries level with the Location of Customers. It also has a pie chart representing Sex, and a column chart for Age distribution. It has one slicer to select Dates.
-!()
+![](files/customers-4.png)
 
-The _Customers_ report is also available in a mobile version.
-!()
+The _Customers_ report is also available in a mobile version. Open access of this version is not possible, but can be granted on-demand by completing [this form](https://docs.google.com/forms/d/e/1FAIpQLScjgKNAqRjha7tfEe6AJcI6E5am05cwzXbEG2TH6gllG4AwvQ/viewform?usp=header) (resources are typically sent within 24hs).
+![](files/customers-5.png)
+
+### Power BI Dashboard
+
+A dashboard, called _Executive Statistics_, was created as a summary of the main indicators to be followed by the C-level: Yearly Revenue, Yearly Gross Profit, Top 3 Product Categories by Profit, and Countries Ranking by Profit. It has a desktop and a mobile version.
+
+Open access of this version is not possible, but can be granted on-demand by completing [this form](https://docs.google.com/forms/d/e/1FAIpQLScjgKNAqRjha7tfEe6AJcI6E5am05cwzXbEG2TH6gllG4AwvQ/viewform?usp=header) (resources are typically sent within 24hs).
+
+![](files/dashboard-1.png)
+
+![](files/dashboard-2.png)
 
 ### Key Insights
 
