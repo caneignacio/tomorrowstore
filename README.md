@@ -257,7 +257,7 @@ The fourth and last report, _Customers_, shows indicators and detailed informati
 ![](files/customers-4.png)
 
 The _Customers_ report is also available in a mobile version. Open access of this version is not possible, but can be granted on-demand by completing [this form](https://docs.google.com/forms/d/e/1FAIpQLScjgKNAqRjha7tfEe6AJcI6E5am05cwzXbEG2TH6gllG4AwvQ/viewform?usp=header) (resources are typically sent within 24hs).
-![](files/customers-5.png)
+![](files/customers-5.jpg)
 
 ### Power BI Dashboard
 
@@ -267,7 +267,7 @@ Open access of this version is not possible, but can be granted on-demand by com
 
 ![](files/dashboard-1.png)
 
-![](files/dashboard-2.png)
+![](files/dashboard-2.jpg)
 
 ### Key Insights
 
