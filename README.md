@@ -299,7 +299,7 @@ By interacting with the different slicers, we can extract some further insights:
 
 As stated before, a PowerPoint file was be developed, showing many of the insights from the previous section, as if it was to be presented by John Doe, Tomorrowstore's CFO, to the rest of the company.
 
-The [tomorrowstore-results.pptx](files/tomorrowstore-results.pptx) Powerpoint file can be found on this Github repository, or can be accessed as an [online PDF](https://acrobat.adobe.com/id/urn:aaid:sc:us:ee10616c-66e2-422a-acda-35ead12bf4a5) too.
+The [tomorrowstore-results.pptx](files/tomorrowstore-results.pptx) Powerpoint file and its [PDF version]() can be found on this Github repository.
 
 ![](files/presentation.png)
 
