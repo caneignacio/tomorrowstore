@@ -34,7 +34,7 @@ The available data for this project consists in eight datasets. They are availab
 
 - [store.csv](files/store.csv): Information about all stores.
 
-As a first step, an initial exploration was performed in SQL Server for each of the files. The queries can be found in the respective “initial-exploration” SQL files (one for each dataset) inside (this folder)[files/SQLfiles]. Then, more detailed aspects were checked directly on PowerQuery, after loading the datasets.
+As a first step, an initial exploration was performed in SQL Server for each of the files. The queries can be found in the respective SQL files inside [this folder](files/SQLfiles). Then, more detailed aspects were checked directly on PowerQuery, after loading the datasets.
 
 The steps taken and main results can be summed up as follows:
 
