@@ -18,21 +18,21 @@ The main goal of this work is to provide analytical tools to different areas in 
 
 The available data for this project consists in eight datasets. They are available in the [SQLBI](https://www.sqlbi.com/tools/contoso-data-generator/) website. They are based on the _Contoso_ Microsoft dataset:
 
-- [currencyexchange.csv](files/currencyexchange.csv): Currency exchange values for different dates.
+- [currencyexchange.csv](files/datasets/currencyexchange.csv): Currency exchange values for different dates.
 
-- [customer.csv](files/customer.csv): Information about each customer.
+- [customer.csv](files/datasets/customer.csv): Information about each customer.
 
-- [date.csv](files/date.csv): A date table comprising all possible dates to be assigned to the data.
+- [date.csv](files/datasets/date.csv): A date table comprising all possible dates to be assigned to the data.
 
-- [orderrows.csv](files/orderrows.csv): A row per each product purchased in an order.
+- [orderrows.csv](files/datasets/orderrows.csv): A row per each product purchased in an order.
 
-- [orders.csv](files/orders.csv): A row per each order purchased.
+- [orders.csv](files/datasets/orders.csv): A row per each order purchased.
 
-- [product.csv](files/product.csv): Information about the different products sold by the company.
+- [product.csv](files/datasets/product.csv): Information about the different products sold by the company.
 
-- [sales.csv](files/sales.csv): A row per each product purchased in an order.
+- [sales.csv](files/datasets/sales.csv): A row per each product purchased in an order.
 
-- [store.csv](files/store.csv): Information about all stores.
+- [store.csv](files/datasets/store.csv): Information about all stores.
 
 As a first step, an initial exploration was performed in SQL Server for each of the files. The queries can be found in the respective SQL files inside [this folder](files/SQLfiles). Then, more detailed aspects were checked directly on PowerQuery, after loading the datasets.
 
@@ -197,7 +197,7 @@ IF(
     NextYearBD)
 ´´´
 
-The following image shows the definitive semantic model, which can be accessed [via web]() or downloading the [file](tomorrowstore-datamodel.pbix) from Github repository.
+The following image shows the definitive semantic model, which can be accessed [via web]() or downloading the [file](files/tomorrowstore-datamodel.pbix) from Github repository.
 
 ![](files/model.png)
 
@@ -205,7 +205,7 @@ The following image shows the definitive semantic model, which can be accessed [
 
 The model was published into Power BI Service and used as a data source for all reports. Each report was created using specific columns and measures from this model.
 
-The first report, _Financial & Sales_, shows general economic indicators about TomorrowStore’s activity, such as revenue and profit ([Web version]() and [Power BI file](files/tomorrowstore-financial-&-sales) available). It has a Front Cover and the following three pages:
+The first report, _Financial & Sales_, shows general economic indicators about TomorrowStore’s activity, such as revenue and profit ([Web version](https://app.powerbi.com/view?r=eyJrIjoiZWM0ODAwMzMtYjY2Yy00ODU4LTgzNWItMmU3N2U3NDZmYjA0IiwidCI6IjM1NDg3YTU2LTFlNGYtNDAzNC04ODNkLWViYjBiMDMxZDNjNCIsImMiOjR9&pageName=b00d3c878e8da03d4502) and [Power BI file](files/tomorrowstore-financial-&-sales) available). It has a Front Cover and the following three pages:
 - General stats: It shows cards with Revenue, Average Order Value, Gross Profit, CoGS, and Gross Profit Margin. It also has a date slicer.
  ![](files/financialsales-2.png)
 
@@ -215,14 +215,14 @@ The first report, _Financial & Sales_, shows general economic indicators about T
 - Gross Profit: It has the same visuals and slicers as the previous page, but showing Gross Profit and CoSG instead of Revenue and Average Order Value.
 ![](files/financialsales-4.png)
 
-The second report, _Stores_, shows indicators and detailed information about stores([Web version]() and [Power BI file](files/tomorrowstore-stores) available). It has a Front Cover and the following two pages:
+The second report, _Stores_, shows indicators and detailed information about stores([Web version](https://app.powerbi.com/view?r=eyJrIjoiNWYyZjYzYjItNmUzZi00ZTY0LWIxMTUtYTdhZjA3MmYxYWNjIiwidCI6IjM1NDg3YTU2LTFlNGYtNDAzNC04ODNkLWViYjBiMDMxZDNjNCIsImMiOjR9&pageName=68868b844640761e4c9d) and [Power BI file](files/tomorrowstore-stores) available). It has a Front Cover and the following two pages:
 - Stores: It shows a card with the total Number of Stores and a bar chart with the Top 10 Stores (with buttons to change between two dimensions: Revenue and Gross Profit). It also has slicers to select Countries, Product Categories, and Dates.
 ![](files/stores-2.png)
  
 - Countries: It shows a filled map at the Countries level and a bar chart with a ranking of Countries (with buttons to change between three dimensions: Number of Stores, Revenue, and Gross Profit). It also has slicers to select Product categories and Dates.
 ![](files/stores-3.png)
 
-The third report, _Products_, shows indicators and detailed information about TomorrowStore’s products([Web version]() and [Power BI file](files/tomorrowstore-products) available). It has a Front Cover and the following three pages:
+The third report, _Products_, shows indicators and detailed information about TomorrowStore’s products([Web version](https://app.powerbi.com/view?r=eyJrIjoiYjJmMTliYmItNzUzZC00ZmI1LWJjN2ItMDgzY2Y0MzA4ZmIxIiwidCI6IjM1NDg3YTU2LTFlNGYtNDAzNC04ODNkLWViYjBiMDMxZDNjNCIsImMiOjR9&pageName=ecda0458007646906962) and [Power BI file](files/tomorrowstore-products) available). It has a Front Cover and the following three pages:
 - Products: It shows a card with the total Number of Products and a bar chart with the Top 10 Products (with buttons to change between four dimensions: Number of Customers, Units Sold, Revenue, and Gross Profit). It has a table that shows the Top Pair (or pairs) of Products most frequently bought together. It also has slicers to select Countries, Product Categories, Product Subcategories, and Dates.
 ![](files/products-2.png)
 
@@ -232,7 +232,7 @@ The third report, _Products_, shows indicators and detailed information about To
 - Price Analysis: It shows two scatter plot charts, one comparing Price to Units Sold, and the other comparing Price to Unit Cost. It also has slicers to select Product Categories, Product Subcategories, and Dates.
 ![](files/products-4.png)
 
-The fourth and last report, _Customers_, shows indicators and detailed information about TomorrowStore’s clients, with some visuals designed for direct actions ([Web version]() and [Power BI file](files/tomorrowstore-customers) available). It has a Front Cover and the following three pages:
+The fourth and last report, _Customers_, shows indicators and detailed information about TomorrowStore’s clients, with some visuals designed for direct actions ([Web version](https://app.powerbi.com/view?r=eyJrIjoiNzUyOTVkMDItOWE1MS00MDExLTk4MzYtNmZmMGZmNDU2NjhlIiwidCI6IjM1NDg3YTU2LTFlNGYtNDAzNC04ODNkLWViYjBiMDMxZDNjNCIsImMiOjR9&pageName=952f319e88830429ad99) and [Power BI file](files/tomorrowstore-customers) available). It has a Front Cover and the following three pages:
 - Top Customers: It shows a card with the Number of Customers, a bar chart with the Top 10 Customers by Revenue, and a table with the Top 100 Customers whose birthday is on this day (to be used for mailing campaigns). It has slicers to select Countries.
 ![](files/customers-2.png)
 
