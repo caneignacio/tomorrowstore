@@ -205,7 +205,7 @@ The following image shows the definitive semantic model:
 
 The model was published into Power BI Service and used as a data source for all reports. Each report was created using specific columns and measures from this model.
 
-The first report, _Financial & Sales_, shows general economic indicators about TomorrowStore’s activity, such as revenue and profit. It has a Front Cover and the following three pages:
+The first report, _Financial & Sales_, shows general economic indicators about TomorrowStore’s activity, such as revenue and profit ([Web version]() and [Power BI file](files/tomorrowstore-financial-&-sales) available). It has a Front Cover and the following three pages:
 - General stats: It shows cards with Revenue, Average Order Value, Gross Profit, CoGS, and Gross Profit Margin. It also has a date slicer.
  !()
 
@@ -215,14 +215,14 @@ The first report, _Financial & Sales_, shows general economic indicators about T
 - Gross Profit: It has the same visuals and slicers as the previous page, but showing Gross Profit and CoSG instead of Revenue and Average Order Value.
 !()
 
-The second report, _Stores_, shows indicators and detailed information about stores. It has a Front Cover and the following two pages:
+The second report, _Stores_, shows indicators and detailed information about stores([Web version]() and [Power BI file](files/tomorrowstore-stores) available). It has a Front Cover and the following two pages:
 - Stores: It shows a card with the total Number of Stores and a bar chart with the Top 10 Stores (with buttons to change between two dimensions: Revenue and Gross Profit). It also has slicers to select Countries, Product Categories, and Dates.
 !()
  
 - Countries: It shows a filled map at the Countries level and a bar chart with a ranking of Countries (with buttons to change between three dimensions: Number of Stores, Revenue, and Gross Profit). It also has slicers to select Product categories and Dates.
 !()
 
-The third report, _Products_, shows indicators and detailed information about TomorrowStore’s products. It has a Front Cover and the following three pages:
+The third report, _Products_, shows indicators and detailed information about TomorrowStore’s products([Web version]() and [Power BI file](files/tomorrowstore-products) available). It has a Front Cover and the following three pages:
 - Products: It shows a card with the total Number of Products and a bar chart with the Top 10 Products (with buttons to change between four dimensions: Number of Customers, Units Sold, Revenue, and Gross Profit). It has a table that shows the Top Pair (or pairs) of Products most frequently bought together. It also has slicers to select Countries, Product Categories, Product Subcategories, and Dates.
 !()
 
@@ -232,7 +232,7 @@ The third report, _Products_, shows indicators and detailed information about To
 - Price Analysis: It shows two scatter plot charts, one comparing Price to Units Sold, and the other comparing Price to Unit Cost. It also has slicers to select Product Categories, Product Subcategories, and Dates.
 !()
 
-The fourth and last report, _Customers_, shows indicators and detailed information about TomorrowStore’s clients, with some visuals designed for direct actions. It has a Front Cover and the following three pages:
+The fourth and last report, _Customers_, shows indicators and detailed information about TomorrowStore’s clients, with some visuals designed for direct actions ([Web version]() and [Power BI file](files/tomorrowstore-customers) available). It has a Front Cover and the following three pages:
 - Top Customers: It shows a card with the Number of Customers, a bar chart with the Top 10 Customers by Revenue, and a table with the Top 100 Customers whose birthday is on this day (to be used for mailing campaigns). It has slicers to select Countries.
 !()
 
@@ -249,31 +249,38 @@ The _Customers_ report is also available in a mobile version.
 
 As stated at the beginning of this project description, the goal of the analysis was to extract the main Tomorrowstore's results in Q2 2023. The different reports allow to extract some interesting insights in this direction:
 
-- 
+- Financial & Sales:
+  - Total Revenue was 6.97M (millions of US dollars), while Gross Profit was 3.90M.
+  - Both measures experienced a significant fall, of around 36%, in comparison with the same quarter of the previous year.
 
-## Powerpoint Presentation
+- Stores:
+  - There were United States is the country with most stores (21), while the rest of the countries have from 2 to 8 stores each.
+  - Online store is the most profitable one, with a Gross Profit of around 2.4M, followed by United States with 700K (thousands of US dollars).
 
-As it was previously stated, an informational video was developed with the main conclusions of this analysis. It was designed as if it were authored by _Policy Checkers_, a fictional NGO which informs the public about different policies worldwide and their impact.
+- Products:
+  - The top product category was Computers, both by Revenue and Gross Profit, while Cell Phones was the top category for number of Customers and Units Sold.
+  - The to product by Revenue and Gross Profit was Adventure Works 52" LCD HDVT X590 Silver. By Customers, it was SD DVD 14" Player Portable L100 Black, and by Units Sold the top product was SV DVD Recorder L230 Grey.
+  - Regarding the analysis of Price and Cost, there is a fairly evident correlation between the two variables (in general, the products which cost the most have the higher prices). With Price and Units Sold, the relation is not so clear: the cheaper products show a wide range of units sold, while the more expensive ones tend to have considerably less sales. 
 
-The [informational-video.mp4] video file can be found on this Github repository.
+- Customers:
+  - There were 3164 customers in Q2 2023, with an average 2.20K Customer Revenue and a 3% of Repeated Purchase Rate.
+  - These customers were roughly 50% males and 50% males, with more or less evenly distributed ages, the most frequent being from 41 to 60. Most clients were American (more than 1500).
+ 
+By interacting with the different slicers, we can extract some further insights:
+- The yearly drop in Revenue and Gross Profit was mostly concentrated in US and UK, with a fall of slightly more than 54%. The remaining locations, including the Online store, showed a considerable but milder drop, of almost 29%.
+- This drop can be also analyzed in terms of product categories. For Audio, Games and Toys, and Home Appliances, the fall was around 5-7%, while it surpassed 41% for the remaining categories.
+- Finally, the top 3 products (regarding Gross Profit) did not show a decrease, but a considerable growth in terms of yearly Revenue and Gross Profit, of around 27-29%.
+
+### Powerpoint Presentation
+
+As stated before, a PowerPoint file was be developed, showing many of the insights from the previous section, as if it was to be presented by John Doe, Tomorrowstore's CFO, to the rest of the company.
+
+The [tomorrowstore-results.pptx](files/tomorrowstore-results.pptx) Powerpoint file can be found on this Github repository.
 
 ### Data Source
 
-UNESCO Institute for Statistics (UIS), [https://databrowser.uis.unesco.org/browser/EDUCATION/UIS-SDG4Monitoring/t4.4/i4.4.3](https://databrowser.uis.unesco.org/browser/EDUCATION/UIS-SDG4Monitoring/t4.4/i4.4.3), July 18th 2025.
-
-UNESCO Institute for Statistics (UIS), [https://databrowser.uis.unesco.org/browser/EDUCATION/UIS-SDG9Monitoring/t9.5/i9.5.2?highlightId=i9.5.2](https://databrowser.uis.unesco.org/browser/EDUCATION/UIS-SDG9Monitoring/t9.5/i9.5.2?highlightId=i9.5.2), July 16th 2025.
-
-UNESCO Institute for Statistics (UIS), [https://databrowser.uis.unesco.org/browser/EDUCATION/UIS-SDG4Monitoring/t1.a/i1.a.2?highlightId=XGOVEXP.IMF&highlightGroupId=IG-XGOVEXP.IMF](https://databrowser.uis.unesco.org/browser/EDUCATION/UIS-SDG4Monitoring/t1.a/i1.a.2?highlightId=XGOVEXP.IMF&highlightGroupId=IG-XGOVEXP.IMF), June 27th 2025.
-
-UN Statistics Division (UNSD), [https://unstats.un.org/unsd/methodology/m49/overview/](https://unstats.un.org/unsd/methodology/m49/overview/), extracted from [CODE FOR IATI](https://codelists.codeforiati.org/RegionM49/).
+All the datasets were extracted from the [SQLBI](https://www.sqlbi.com/tools/contoso-data-generator/) website.
 
 ### References
 
-Gutpa S. (2025, February 25). Funding education as an investment in the future. [https://www.unesco.org/sdg4education2030/en/articles/funding-education-investment-future]( https://www.unesco.org/sdg4education2030/en/articles/funding-education-investment-future)
-
 World map image in informational video by Al MacDonald [2]/ twitter account @F1LT3R, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7469140
-
-Music in informational video: Expedition by Alex-Productions https://soundcloud.com/alexproductionsmusic
-License: Creative Commons — Attribution 3.0 Unported — CC BY 3.0
-Free Download / Stream: https://www.audiolibrary.com.co/alex-productions/expedition
-Music promoted by Audio Library: https://youtu.be/-_CEmB_dHpA
