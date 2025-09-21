@@ -42,8 +42,7 @@ The steps taken and main results can be summed up as follows:
 
 All datasets were queried to have a first look to their different columns and values in them. The commands used to create the tables in SQL and then query them were:
 
-´´´
-
+```
 BULK INSERT Table_Name
 FROM '…\table-file.csv'
 WITH (
@@ -53,18 +52,15 @@ WITH (
     	)
 
 SELECT * FROM Table_Name;
-
-´´´
+```
 
 At a first glance, the “sales.csv” dataset had the same information as the “orderrows.csv” and “orders.csv” files combined, with the respective exchange value from the “currencyexchange.csv” file. To check this, a new table was created by joining the three files, and then compared to the “sales.csv” dataset, with the following command:
 
-´´´
-
+```
 SELECT * FROM Old_Table
 INTERSECT
 SELECT * FROM New_Table;
-
-´´´
+```
 
 This query returned all rows in the tables, which showed that our first supposition was correct. As a result, “currencyexchange.csv”, “orderrows.csv” and “orders.csv” were not considered for the rest of the analysis.
 
