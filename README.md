@@ -197,7 +197,7 @@ IF(
     NextYearBD)
 ´´´
 
-The following image shows the definitive semantic model:
+The following image shows the definitive semantic model, which can be accessed [via web]() or downloading the [file](tomorrowstore-datamodel.pbix) from Github repository.
 
 !()
 
