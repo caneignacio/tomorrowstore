@@ -245,6 +245,10 @@ The fourth and last report, _Customers_, shows indicators and detailed informati
 The _Customers_ report is also available in a mobile version.
 !()
 
+### Power BI Dashboard
+
+A dashboard, called _Executive Statistics_, was created as a summary of the main indicators to be followed by the C-level: Yearly Revenue, Yearly Gross Profit, Top 3 Product Categories by Profit, and Countries Ranking by Profit. It has a desktop and a mobile version, both available via [this link]().
+
 ### Key Insights
 
 As stated at the beginning of this project description, the goal of the analysis was to extract the main Tomorrowstore's results in Q2 2023. The different reports allow to extract some interesting insights in this direction:
