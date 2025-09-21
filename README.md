@@ -176,7 +176,7 @@ After creating the four main tables, some dimension tables were added, both as P
 
 - Firstly, two location tables were created, to represent separate relationships to _Customer_ and _Store_ (and, through them, to _Sales_). This was done by creating a _locationsource_ table with the location-related columns from “customer.csv”, a second _LocationStore_ table based on “store.csv”, and merging both into _LocationStore_ (only keeping _GeoAreaKey_, _Continent_, _State_, and _Country_). After deleting all duplicate rows, this table was copied into a new _LocationCustomer_ table.
 
-- Secondly, three date tables were created to represent one-to-many relationships to _Customer_, _Sales_, and _Store_. These were: _DateCustomerBirthday_, _DateCustomer_, _DateSales_, and _DateStore_. They were created by using the CALENDAR() function over the union of the date columns of each table (that is, to consider the widest possible range of dates in each whole table). Additionally, an _AllDatesAnalysis_ table was created, using the CALENDARAUTO() function, with no relationships to other tables, just to be used in measures and visuals.
+- Secondly, three date tables were created to represent one-to-many relationships to _Customer_, _Sales_, and _Store_. These were: _DateCustomerBirthday_, _DateCustomer_, _DateSales_, and _DateStore_. They were created by using the `CALENDAR()` function over the union of the date columns of each table (that is, to consider the widest possible range of dates in each whole table). Additionally, an _AllDatesAnalysis_ table was created, using the `CALENDARAUTO()` function, with no relationships to other tables, just to be used in measures and visuals.
 
 - Finally, a _ProductPairAnalysis_ table was created in Power Query, as a way to show which pairs of products were purchased most frequently. This was done by following these steps:
 1. Reference _Sales_ into a new query.
@@ -193,15 +193,15 @@ Many measures were created in DAX, for later use in visuals:
 
 The following calculated columns were created for their use on _Financial & Sales_ measures:
 
-- SaleNetPrice(USD) = ´Sales[NetPrice] * Sales[Quantity] * Sales[ExchangeRate]´
-- SaleCost(USD) = ´Sales[UnitCost] * Sales[Quantity] * Sales[ExchangeRate]´
-- SaleProfit(USD) = ´Sales[SaleNetPrice] – Sales[SaleCost]´
+- SaleNetPrice(USD) = `Sales[NetPrice] * Sales[Quantity] * Sales[ExchangeRate]`
+- SaleCost(USD) = `Sales[UnitCost] * Sales[Quantity] * Sales[ExchangeRate]`
+- SaleProfit(USD) = `Sales[SaleNetPrice] – Sales[SaleCost]`
 
 In addition, the following columns were added to _Customer_, to be used in measures and visuals:
-- FullName (in Power Query) = ´Table.AddColumn(#"Filtered Rows", "FullName", each [Surname] & " " & [GivenName] & " " & [CustomerKey])´
-- IsActive (in DAX) = ´AND(Customer[StartDT] <= TODAY(), Customer[EndDT] > TODAY())´
+- FullName (in Power Query) = `Table.AddColumn(#"Filtered Rows", "FullName", each [Surname] & " " & [GivenName] & " " & [CustomerKey])`
+- IsActive (in DAX) = `AND(Customer[StartDT] <= TODAY(), Customer[EndDT] > TODAY())`
 - NextBirthday (in DAX) = 
-´´´
+```
 VAR ThisYearBD = DATE(YEAR(TODAY()), MONTH(Customer[Birthday]), day(Customer[Birthday]))
 VAR NextYearBD = DATE(YEAR(TODAY()) + 1, MONTH(Customer[Birthday]), day(Customer[Birthday]))
 RETURN
@@ -209,7 +209,7 @@ IF(
     ThisYearBD >= TODAY(),
     ThisYearBD,
     NextYearBD)
-´´´
+```
 
 The following image shows the definitive semantic model, which can be accessed downloading the [file](tomorrowstore-datamodel.pbix) from this Github repository.
 
