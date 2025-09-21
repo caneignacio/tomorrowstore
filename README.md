@@ -309,4 +309,4 @@ All the datasets were extracted from the [SQLBI](https://www.sqlbi.com/tools/con
 
 ### References
 
-World map image in informational video by Al MacDonald [2]/ twitter account @F1LT3R, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7469140
+World map image in Powerpoint presentation by Al MacDonald [2]/ twitter account @F1LT3R, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7469140
