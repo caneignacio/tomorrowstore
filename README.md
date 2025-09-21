@@ -301,6 +301,8 @@ As stated before, a PowerPoint file was be developed, showing many of the insigh
 
 The [tomorrowstore-results.pptx](files/tomorrowstore-results.pptx) Powerpoint file can be found on this Github repository.
 
+![](files/presentation.png)
+
 ### Data Source
 
 All the datasets were extracted from the [SQLBI](https://www.sqlbi.com/tools/contoso-data-generator/) website.
